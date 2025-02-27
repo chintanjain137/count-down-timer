@@ -1,0 +1,43 @@
+  .lp-section-text-and-vertical-video .countdown .timer {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  justify-content: center;
+}
+.lp-section-text-and-vertical-video .countdown .timer .timer-item {
+  flex: 0 0 44px;
+  max-width: 44px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.lp-section-text-and-vertical-video .countdown .timer .timer-item span {
+  font-family: Oswald, sans-serif;
+  font-style: normal;
+  display: block;
+  color: #000;
+  text-transform: uppercase;
+}
+.lp-section-text-and-vertical-video
+  .countdown
+  .timer
+  .timer-item
+  .timer-item-number,
+.lp-section-text-and-vertical-video .countdown .timer .clone {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 1;
+  color: #000;
+}
+.lp-section-text-and-vertical-video
+  .countdown
+  .timer
+  .timer-item
+  .timer-item-text {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.5;
+}
