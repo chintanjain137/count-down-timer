@@ -1,0 +1,91 @@
+<div class="wide-container section-text-and-vertical-video__first-inner">
+  <div class="section-text-and-vertical-video__first-body">
+    <countdown-timer class="lp-section-text-and-vertical-video">
+      <div class="countdown">
+        <input type="hidden" name="countdown-inputs" data-date="{{ section.settings.date }}" data-hours="{{ section.settings.hour }}" data-minutes="{{ section.settings.minute }}" data-day_format="{{ section.settings.time_format }}" />
+        <div class="timer">
+          <div class="timer-item">
+            <span id="days" class="timer-item-number">00</span>
+            <span class="timer-item-text">Days</span>
+          </div>
+          <span class="clone">:</span>
+          <div class="timer-item">
+            <span id="hours" class="timer-item-number">00</span>
+            <span class="timer-item-text">Hours</span>
+          </div>
+          <span class="clone">:</span>
+          <div class="timer-item">
+            <span id="minutes" class="timer-item-number">00</span>
+            <span class="timer-item-text">Minutes</span>
+          </div>
+          <span class="clone">:</span>
+          <div class="timer-item">
+            <span id="seconds" class="timer-item-number">00</span>
+            <span class="timer-item-text">Seconds</span>
+          </div>
+        </div>
+      </div>
+    </countdown-timer>
+  </div>
+</div>
+<script src="{{ 'countdown-timer.js' |  asset_url }}"  async></script>
+{% schema %}
+  {
+    "name": "Countdown Timer",
+    "tag": "section",
+    "class": "countdown-timer",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "text",
+        "id": "date",
+        "label": "Targetted Date",
+        "default": "03/06/2024",
+        "info": "Date should be in mm/dd/yyyy format."
+      },
+      {
+        "type": "range",
+        "id": "hour",
+        "min": 0,
+        "max": 12,
+        "step": 1,
+        "unit": "hr",
+        "label": "Hours",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "minute",
+        "min": 0,
+        "max": 60,
+        "step": 1,
+        "unit": "min",
+        "label": "Minutes",
+        "default": 30
+      },
+      {
+        "type": "select",
+        "id": "time_format",
+        "label": "AM/PM",
+        "options": [
+          {
+            "value": "am",
+            "label": "AM"
+          },
+          {
+            "value": "pm",
+            "label": "PM"
+          }
+        ],
+        "default": "pm"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Countdown Timer",
+        "settings": {
+        }
+      }
+    ]
+  }
+{% endschema %}
